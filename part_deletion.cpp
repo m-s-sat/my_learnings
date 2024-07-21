@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 using namespace std;
 
 string del_part(string s,string part){
