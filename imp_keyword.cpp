@@ -1,6 +1,7 @@
 #include<iostream>
 #include<math.h>
 using namespace std;
+
 #define PI 3.14
 #define AREA(l,b) (l*b)
 #define AREA_1(r,h) (PI*pow(r,2)*h) 
