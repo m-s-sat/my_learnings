@@ -6,10 +6,10 @@ int binary_search(int arr[],int size,int key){
     int end = size-1;
     int mid = (start+end)/2;
     while(start<=end){
-        if(arr[end]>key){
+        if(arr[mid]>key){
             end = mid-1;
         }
-        else if(arr[start]<key){
+        else if(arr[mid]<key){
             start = mid +1;
         }
         else{
