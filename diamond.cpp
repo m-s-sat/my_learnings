@@ -20,7 +20,7 @@ int main(){
             i++;
         }
         row++;
-        cout<<endl;
+        cout<<endl; 
     }
     row=1;
     while(row<=n){
