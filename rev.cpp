@@ -48,18 +48,18 @@
 
 // merge in same array;
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-int main(){
-    int arr[5]={1,2,3,4,5};
-    for(int i=5;i>=2;i--){
-        arr[i-1]=arr[i+1];
-    }
-    for(int i=0;i<5;i++){
-        cout<<arr[i]<<" ";
-    }
-}
+// int main(){
+//     int arr[5]={1,2,3,4,5};
+//     for(int i=5;i>=2;i--){
+//         arr[i-1]=arr[i+1];
+//     }
+//     for(int i=0;i<5;i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
 
 // void sorted(int nums1[],int m,int nums2[],int n){
 //     int s1=0;
@@ -84,7 +84,35 @@ int main(){
 //     }
 // }
 
+#include<iostream>
+using namespace std;
 
+int index_peak(int arr[],int size){
+    int s=0;
+    int e=size-1;
+    int mid = e+(s-e)/2;
+    while(s<e){
+        if(arr[mid]<arr[mid+1]){
+            s=mid+1;
+        }
+        else{
+            e=mid;
+        }
+        mid = e+(s-e)/2;
+    }
+    return s;
+}
+
+int main(){
+    int arr[100];
+    int size;
+    cin>>size;
+    for(int i=0;i<size;i++){
+        cin>>arr[i];
+    }
+    int index  = index_peak(arr,size);
+    cout<<index;
+}
 
 
 
