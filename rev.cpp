@@ -84,42 +84,82 @@
 //     }
 // }
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-int index_peak(int arr[],int size){
-    int s=0;
-    int e=size-1;
-    int mid = e+(s-e)/2;
-    while(s<e){
-        if(arr[mid]<arr[mid+1]){
-            s=mid+1;
-        }
-        else{
-            e=mid;
-        }
-        mid = e+(s-e)/2;
-    }
-    return s;
-}
+// int index_peak(int arr[],int size){
+//     int s=0;
+//     int e=size-1;
+//     int mid = e+(s-e)/2;
+//     while(s<e){
+//         if(arr[mid]<arr[mid+1]){
+//             s=mid+1;
+//         }
+//         else{
+//             e=mid;
+//         }
+//         mid = e+(s-e)/2;
+//     }
+//     return s;
+// }
 
-int main(){
-    int arr[100];
-    int size;
-    cin>>size;
-    for(int i=0;i<size;i++){
-        cin>>arr[i];
-    }
-    int index  = index_peak(arr,size);
-    cout<<index;
-}
+// int main(){
+//     int arr[100];
+//     int size;
+//     cin>>size;
+//     for(int i=0;i<size;i++){
+//         cin>>arr[i];
+//     }
+//     int index  = index_peak(arr,size);
+//     cout<<index;
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+//     string str;
+//     getline(cin,str);
+//     int length = str.length();
+//     cout<<length<<endl;
+//     cout<<str;
+//     int s=0;
+//     int e=length-1;
+    
+//     while(str[s]!='\0'){
+
+//     }
+// }
 
 
 
+// #include<iostream>
+// using namespace std;
 
-
-
-
+// int main(){
+//     int t;
+//     cin>>t;int b=t;
+//     int a[t];
+//     string str1,str2;
+//     while(t--){
+//         cin>>str1>>str2;
+//         int i=0;
+//         while(str1[i]==str2[i]){
+//             i++;
+//         }
+//         if(i){
+//             a[t]=str1.size()+str2.size()-i+1;
+//         }
+//         else{
+//             a[t]=str1.size()+str2.size();
+//         }
+//     }
+//     while(b--){
+//         cout<<a[b]<<endl;
+//     }
+//     return 0;
+// }
 
 
 
