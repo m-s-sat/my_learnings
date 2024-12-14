@@ -1,30 +1,28 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
-bool isSorted(int *arr,int size){
-    if(size==0||size==1){
+bool isSorted(int *arr,int n){
+    if(n==0){
         return true;
     }
     if(arr[0]>arr[1]){
         return false;
     }
-    else{
-        bool sorted = isSorted(arr+1,size-1);
-        return sorted;
-    }
+    return isSorted(arr+1,n-1);
 }
 
 int main(){
-    int arr[100];
-    int size;
-    cin>>size;
-    for(int i=0;i<size;i++){
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
         cin>>arr[i];
     }
-    if(isSorted(arr,size)){
-        cout<<"Array is sorted"<<endl;
+    if(isSorted(arr,n)){
+        cout<<"Sorted"<<endl;
     }
     else{
-        cout<<"Array is not sorted"<<endl;
+        cout<<"Not Sorted"<<endl;
     }
 }
