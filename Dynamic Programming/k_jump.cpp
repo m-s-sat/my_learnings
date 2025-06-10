@@ -1,28 +1,23 @@
-#include<iostream>
-#include<vector>
+#include<bits/stdc++.h>
 using namespace std;
 
-int f(int ind,int k,vector<int>&heights,vector<int>&dp,int temp){
-    if(ind==0){
-        return 0;
-    }
+int solve(vector<int>heights,int n,int k){
+    if(n==0) return 0;
+    int min_energy = INT_MAX;
     for(int i=1;i<=k;i++){
-        if(ind>=i){
-            int left = f(ind-i,k,heights,dp,temp) + abs(heights[ind]-heights[ind-i]);
-            return temp = min(temp,left);
+        if(n>=i){
+            int jump = solve(heights,n-i,k)+abs(heights[n]-heights[n-i]);
+            cout<<"hello world"<<endl;
+            min_energy = min(jump,min_energy);
         }
     }
-    return 0;
+    return min_energy;
 }
 
 int main(){
     int n,k;
     cin>>n>>k;
-    vector<int>heights(n);
-    for(int i=0;i<n;i++){
-        cin>>heights[i];
-    }
-    int temp = __INT_MAX__;
-    vector<int>dp;
-    cout<<f(n,k,heights,dp,temp);
+    vector<int> heights;
+    for(int i=0;i<n;i++) cin>>heights[i];
+    cout<<solve(heights,n-1,k);
 }
